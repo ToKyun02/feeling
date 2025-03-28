@@ -9,7 +9,7 @@ export default function Profile() {
         alignItems: 'center',
       }}
     >
-      <Text>Profile Screen</Text>
+      <Text style={{ fontFamily: 'NotoSansKR_400Regular' }}>Profile Screen</Text>
     </View>
   );
 }
