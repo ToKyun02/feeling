@@ -1,15 +1,11 @@
-import { Text, View } from 'react-native';
+import { useTheme } from '@/providers/ThemeProvider';
+import { Text, ScrollView } from 'react-native';
 
 export default function Profile() {
+  const theme = useTheme();
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Text style={{ fontFamily: 'NotoSansKR_400Regular' }}>Profile Screen</Text>
-    </View>
+    <ScrollView style={{ backgroundColor: theme.colors.background }}>
+      <Text style={{ color: theme.colors.text }}>Profile Screen</Text>
+    </ScrollView>
   );
 }

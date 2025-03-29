@@ -1,15 +1,12 @@
-import { Text, View } from 'react-native';
+import { useTheme } from '@/providers/ThemeProvider';
+import { ScrollView, Text } from 'react-native';
 
 export default function Index() {
+  const theme = useTheme();
+
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <Text>Home Screen</Text>
-    </View>
+    <ScrollView style={{ backgroundColor: theme.colors.background }}>
+      <Text style={{ color: theme.colors.text }}>Home Screen</Text>
+    </ScrollView>
   );
 }

@@ -1,13 +1,15 @@
+import Header from '@/components/Header';
+import { useTheme } from '@/providers/ThemeProvider';
 import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
+  const theme = useTheme();
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#0f7f80',
-        headerShown: false,
+        header: () => <Header />,
         tabBarStyle: {
-          backgroundColor: '#25292e',
+          backgroundColor: theme.colors.paper,
         },
       }}
     >
